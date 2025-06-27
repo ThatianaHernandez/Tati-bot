@@ -133,6 +133,7 @@
       <button onclick="quickMessage('¿Cuánto cuesta una campaña?')">Precios</button>
       <button onclick="quickMessage('¿Tienen contacto por WhatsApp?')">Contacto</button>
       <button onclick="quickMessage('¿Diseñan páginas web?')">Desarrollo Web</button>
+        <button onclick="window.open('https://www.google.com/maps?q=Cl.+45+%2318-20,+Bogotá,+Colombia', '_blank')">Ubicación</button>
     </div>
 
     <div class="chat-input">
@@ -174,7 +175,23 @@
       const msg = message.toLowerCase();
 
       if (msg.includes("servicio") || msg.includes("ofrecen")) {
-        return "💼 En <strong>Innovatex Markeg</strong> ofrecemos:<br>✔ Marketing empresarial<br>✔ Marketing de productos<br>✔ Redes sociales<br>✔ Marketing de influencers<br>✔ Desarrollo web<br>✔ Publicidad.";
+         return `💼 En <strong>Innovatex Markeg</strong> ofrecemos los siguientes servicios especializados:
+
+  <br><br>✔ <strong>Marketing empresarial:</strong> Creamos estrategias de marca, posicionamiento, campañas corporativas y comunicación interna para fortalecer tu negocio.
+  
+  <br>✔ <strong>Marketing de productos:</strong> Te ayudamos a lanzar, promocionar y posicionar tus productos en el mercado con campañas enfocadas en resultados.
+
+  <br>✔ <strong>Gestión de redes sociales:</strong> Diseñamos y gestionamos contenido para Facebook, Instagram, TikTok y más, aumentando tu alcance y engagement.
+
+  <br>✔ <strong>Marketing de influencers:</strong> Conectamos tu marca con influencers afines que generan confianza y resultados reales en tu audiencia.
+
+  <br>✔ <strong>Desarrollo web:</strong> Creamos sitios web modernos, optimizados, responsivos y adaptados a tus objetivos de negocio.
+
+  <br>✔ <strong>Publicidad digital:</strong> Diseñamos y gestionamos campañas pagas en Google, Meta (Facebook/Instagram), TikTok Ads y otras plataformas para atraer clientes potenciales.
+
+  <br><br>¿Te gustaría saber más sobre alguno de estos servicios? 😊`;
+      
+
       } else if (msg.includes("precio") || msg.includes("cuánto") || msg.includes("vale")) {
         return "💰 Nuestros precios son personalizados según el servicio y alcance del proyecto. ¿Te interesa una campaña, una página web o manejo de redes?";
       } else if (msg.includes("contacto") || msg.includes("correo") || msg.includes("whatsapp")) {
